@@ -10,7 +10,7 @@ namespace MyFileBrowserProject
     {
         static void Main(string[] args)
         {
-            if( args.Length == 0 )
+            if (args.Length == 0)
             {
                 Console.WriteLine("Geef een argument");
             }
@@ -19,16 +19,16 @@ namespace MyFileBrowserProject
                 switch (args[0])
                 {
                     case "-f":
-                        Console.WriteLine("Alle files in de huidige directory");
+                        ShowAllFilesInCurrentDirectory();
                         break;
                     case "-c":
-                        Console.WriteLine("Huidige directory");
+                        ShowCurrentDirectory();
                         break;
                     case "-d":
-                        Console.WriteLine("Alle subdirectories in de huidige directory");
+                        ShowAllSubDirectorys();
                         break;
                     case "-h":
-                        Console.WriteLine("Toont help");
+                        ShowHelp();
                         break;
                     default:
                         Console.WriteLine("Onbekend argument");
@@ -36,5 +36,28 @@ namespace MyFileBrowserProject
                 }
             }
         }
+
+        static void ShowAllFilesInCurrentDirectory()
+        {
+            Console.WriteLine("Alle files in de huidige directory");
+        }
+
+        static void ShowCurrentDirectory()
+        {
+            Console.WriteLine("Huidige directory");
+        }
+
+        static void ShowAllSubDirectorys()
+        {
+            Console.WriteLine("Alle subdirectories in de huidige directory");
+        }
+
+        static void ShowHelp()
+        {
+            Console.WriteLine("Toont help");
+        }
+
+
+
     }
 }
