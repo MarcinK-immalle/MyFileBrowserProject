@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MyFileBrowserProject
 {
@@ -45,11 +46,16 @@ namespace MyFileBrowserProject
         static void ShowCurrentDirectory()
         {
             Console.WriteLine("Huidige directory");
+            string path = Directory.GetCurrentDirectory();
+            Console.WriteLine(path);
         }
 
         static void ShowAllSubDirectorys()
         {
-            Console.WriteLine("Alle subdirectories in de huidige directory");
+            string path = Directory.GetCurrentDirectory();
+            Directory.GetDirectories(path);
+            Console.WriteLine();
+
         }
 
         static void ShowHelp()
