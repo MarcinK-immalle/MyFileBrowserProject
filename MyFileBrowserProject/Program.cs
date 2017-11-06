@@ -60,7 +60,11 @@ namespace MyFileBrowserProject
 
         static void ShowHelp()
         {
-            Console.WriteLine("Toont help");
+            Console.WriteLine("-> mfb -c : toont de huidige directory");
+            Console.WriteLine("-> mfb - d : toont alle subdirectories in de huidige directory");
+            Console.WriteLine("-> mfb - f : toont alle files in de huidige directory");
+            Console.WriteLine("-> mfb(zonder argumenten) : toont de huidige directory, alle files en alle directories");
+            Console.WriteLine("-> mfb - h : toont help");
         }
 
 
