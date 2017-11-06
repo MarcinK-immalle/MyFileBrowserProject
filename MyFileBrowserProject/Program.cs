@@ -40,22 +40,22 @@ namespace MyFileBrowserProject
 
         static void ShowAllFilesInCurrentDirectory()
         {
-            Console.WriteLine("Alle files in de huidige directory");
+            Console.WriteLine("Alle files in de huidige directory: ");
+            string[] dirs = Directory.GetFiles(Environment.CurrentDirectory);
+            foreach (string dir in dirs)
+            {
+                Console.WriteLine(Path.GetFileName(dir));
+            }
         }
 
         static void ShowCurrentDirectory()
         {
-            Console.WriteLine("Huidige directory");
-            string path = Directory.GetCurrentDirectory();
-            Console.WriteLine(path);
+            Console.WriteLine(Environment.CurrentDirectory);
         }
 
         static void ShowAllSubDirectorys()
         {
-            string path = Directory.GetCurrentDirectory();
-            Directory.GetDirectories(path);
-            Console.WriteLine();
-
+            Console.WriteLine(Directory.GetDirectories(Environment.CurrentDirectory));
         }
 
         static void ShowHelp()
