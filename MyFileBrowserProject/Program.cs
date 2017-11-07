@@ -66,8 +66,5 @@ namespace MyFileBrowserProject
             Console.WriteLine("-> mfb(zonder argumenten) : toont de huidige directory, alle files en alle directories");
             Console.WriteLine("-> mfb - h : toont help");
         }
-
-
-
     }
 }
